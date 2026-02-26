@@ -88,6 +88,17 @@ function init() {
   setupGalleryFilters();
   setYear();
 }
+document.addEventListener("DOMContentLoaded", () => {
+  const showMoreBtn = document.getElementById("showMoreBtn");
+
+  showMoreBtn.addEventListener("click", () => {
+    document.querySelectorAll(".gallery-item.hidden").forEach(item => {
+      item.classList.remove("hidden");
+    });
+
+    showMoreBtn.style.display = "none";
+  });
+});
 
 if (document.readyState === "loading") {
   document.addEventListener("DOMContentLoaded", init);
