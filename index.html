@@ -22,9 +22,45 @@
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600&display=swap"
       rel="stylesheet"
     />
+
+    <style>
+      /* Galéria CSS javítva */
+      .gallery-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        gap: 10px;
+      }
+
+      .gallery-item {
+        border-radius: 12px;
+        overflow: hidden;
+        height: 150px;
+        background-size: cover;
+        background-position: center;
+        transition: transform 0.2s ease;
+      }
+
+      .gallery-item:hover {
+        transform: scale(1.03);
+      }
+
+      .hidden {
+        display: none;
+      }
+
+      .gallery-more-btn {
+        padding: 0.8rem 1.4rem;
+        border-radius: 999px;
+        border: none;
+        cursor: pointer;
+        background: linear-gradient(130deg, #f97316, #ec4899, #6366f1);
+        color: #020617;
+        font-weight: 600;
+        margin-top: 1.5rem;
+      }
+    </style>
   </head>
 
-  <body>
   <body>
     <header class="site-header" id="top">
       <div class="container header-inner">
@@ -60,13 +96,11 @@
           <div class="hero-copy">
             <p class="eyebrow">Fotó & videó • történetmesélés</p>
             <h2>
-              Megállítom a pillanatot, <span>filmre írom</span> az
-              emlékeidet.
+              Megállítom a pillanatot, <span>filmre írom</span> az emlékeidet.
             </h2>
             <p class="hero-text">
-              Esküvők, portrék, rendezvények és filmes hangulatú videók –
-              letisztult, modern stílusban, természetes színekkel és
-              karakteres fényekkel.
+              Esküvők, portrék, rendezvények és filmes hangulatú videók – letisztult,
+              modern stílusban, természetes színekkel és karakteres fényekkel.
             </p>
 
             <div class="hero-actions">
@@ -76,21 +110,6 @@
               <a href="#elerhetoseg" class="btn btn-ghost" data-scroll>
                 Időpont egyeztetés
               </a>
-            </div>
-
-            <div class="hero-stats">
-              <div class="stat">
-                <span class="stat-number">10+</span>
-                <span class="stat-label">év tapasztalat</span>
-              </div>
-              <div class="stat">
-                <span class="stat-number">200+</span>
-                <span class="stat-label">esküvő & rendezvény</span>
-              </div>
-              <div class="stat">
-                <span class="stat-number">∞</span>
-                <span class="stat-label">elkapott pillanat</span>
-              </div>
             </div>
           </div>
 
@@ -145,60 +164,35 @@
       </section>
 
       <!-- Munkáim / Galéria -->
-      <section class="work">
-    <div class="container">
-      <div class="gallery-grid">
-        <!-- Látható 8 kép -->
-        <div class="gallery-item"><div class="gallery-photo" style="background-image: url('Alexandra és Tomi-20.jpg');"></div></div>
-        <div class="gallery-item"><div class="gallery-photo" style="background-image: url('Alexandra és Tomi-22.jpg');"></div></div>
-        <div class="gallery-item"><div class="gallery-photo" style="background-image: url('Brigi és Attila-106.jpg');"></div></div>
-        <div class="gallery-item"><div class="gallery-photo" style="background-image: url('Brigi és Attila-29.jpg');"></div></div>
-        <div class="gallery-item"><div class="gallery-photo" style="background-image: url('Brigi és Attila-41.jpg');"></div></div>
-        <div class="gallery-item"><div class="gallery-photo" style="background-image: url('Brigi és Attila-73.jpg');"></div></div>
-        <div class="gallery-item"><div class="gallery-photo" style="background-image: url('Brigi és Attila-83.jpg');"></div></div>
-        <div class="gallery-item"><div class="gallery-photo" style="background-image: url('Brigi és Tomi-13.jpg');"></div></div>
+      <section class="work" id="munkak">
+        <div class="container">
+          <div class="gallery-grid">
+            <!-- 8 alapból látható kép -->
+            <div class="gallery-item" style="background-image: url('Alexandra és Tomi-20.jpg');"></div>
+            <div class="gallery-item" style="background-image: url('Alexandra és Tomi-22.jpg');"></div>
+            <div class="gallery-item" style="background-image: url('Brigi és Attila-106.jpg');"></div>
+            <div class="gallery-item" style="background-image: url('Brigi és Attila-29.jpg');"></div>
+            <div class="gallery-item" style="background-image: url('Brigi és Attila-41.jpg');"></div>
+            <div class="gallery-item" style="background-image: url('Brigi és Attila-73.jpg');"></div>
+            <div class="gallery-item" style="background-image: url('Brigi és Attila-83.jpg');"></div>
+            <div class="gallery-item" style="background-image: url('Brigi és Tomi-13.jpg');"></div>
 
-        <!-- További képek rejtve -->
-        <div class="gallery-item hidden"><div class="gallery-photo" style="background-image: url('Brigi és Tomi-19.jpg');"></div></div>
-        <div class="gallery-item hidden"><div class="gallery-photo" style="background-image: url('Brigi és Tomi-41.jpg');"></div></div>
-        <div class="gallery-item hidden"><div class="gallery-photo" style="background-image: url('Brigi és Zoli-33.jpg');"></div></div>
-        <div class="gallery-item hidden"><div class="gallery-photo" style="background-image: url('Brigi és Zoli-43.jpg');"></div></div>
-        <div class="gallery-item hidden"><div class="gallery-photo" style="background-image: url('Brigi és Zoli-63.jpg');"></div></div>
-        <div class="gallery-item hidden"><div class="gallery-photo" style="background-image: url('Brigi és Zoli-67.jpg');"></div></div>
-        <div class="gallery-item hidden"><div class="gallery-photo" style="background-image: url('Brigi és Zoli-72.jpg');"></div></div>
-        <div class="gallery-item hidden"><div class="gallery-photo" style="background-image: url('Brigi és Zoli-75.jpg');"></div></div>
-        <div class="gallery-item hidden"><div class="gallery-photo" style="background-image: url('Brigi és Zoli-90.jpg');"></div></div>
-        <!-- Ide jöhet a többi kép hasonlóan -->
-      </div>
-      <script>
-    document.addEventListener("DOMContentLoaded", () => {
-      const showMoreBtn = document.getElementById("showMoreBtn");
+            <!-- rejtett további képek -->
+            <div class="gallery-item hidden" style="background-image: url('Brigi és Tomi-19.jpg');"></div>
+            <div class="gallery-item hidden" style="background-image: url('Brigi és Tomi-41.jpg');"></div>
+            <div class="gallery-item hidden" style="background-image: url('Brigi és Zoli-33.jpg');"></div>
+            <div class="gallery-item hidden" style="background-image: url('Brigi és Zoli-43.jpg');"></div>
+            <div class="gallery-item hidden" style="background-image: url('Brigi és Zoli-63.jpg');"></div>
+            <div class="gallery-item hidden" style="background-image: url('Brigi és Zoli-67.jpg');"></div>
+            <div class="gallery-item hidden" style="background-image: url('Brigi és Zoli-72.jpg');"></div>
+            <div class="gallery-item hidden" style="background-image: url('Brigi és Zoli-75.jpg');"></div>
+          </div>
 
-      showMoreBtn.addEventListener("click", () => {
-        document.querySelectorAll(".gallery-item.hidden").forEach(item => {
-          item.classList.remove("hidden");
-        });
-        showMoreBtn.style.display = "none";
-      });
-    });
-  </script>
-
-
-      <!-- További képek gomb -->
-      <div style="text-align:center; margin-top: 1.5rem;">
-        <button id="showMoreBtn" class="gallery-more-btn">További képek</button>
-      </div>
-    </div>
-  </section>
-
-    <div class="gallery-more-wrapper">
-      <button id="showMoreBtn" class="gallery-more-btn">
-        További képek
-      </button>
-    </div>
-
-  </div>
-</section>
+          <div style="text-align:center; margin-top: 1.5rem;">
+            <button id="showMoreBtn" class="gallery-more-btn">További képek</button>
+          </div>
+        </div>
+      </section>
 
       <!-- Videók -->
       <section class="section videos" id="videok">
@@ -404,88 +398,4 @@
                 ></textarea>
               </div>
 
-              <button type="submit" class="btn btn-primary form-submit">
-                Üzenet elküldése
-              </button>
-
-              <p class="form-note">
-                Az űrlap jelenleg csak demó – GitHub Pages-en nincs háttér,
-                de az email címedre közvetlenül is írhatsz.
-              </p>
-            </form>
-          </div>
-        </div>
-      </section>
-
-      <!-- GYIK -->
-      <section class="section faq" id="gyik">
-        <div class="container">
-          <div class="section-header">
-            <p class="eyebrow">Gyakori kérdések</p>
-            <h2>GYIK</h2>
-            <p>
-              Pár kérdés, amit gyakran megkapok – a részleteket mindig
-              személyre szabottan beszéljük át.
-            </p>
-          </div>
-
-          <div class="faq-list">
-            <details open>
-              <summary>Mennyivel előre érdemes foglalni?</summary>
-              <p>
-                Esküvők esetén érdemes legalább 6–12 hónappal a dátum előtt
-                érdeklődni, hogy biztosan szabad legyen az időpont. Portré és
-                kisebb projektek esetén rugalmasabb a naptár.
-              </p>
-            </details>
-            <details>
-              <summary>Utazol vidékre / külföldre is?</summary>
-              <p>
-                Igen, megbeszélés szerint Magyarországon belül és külföldre is
-                vállalok munkát. Az utazási költségeket előre egyeztetjük.
-              </p>
-            </details>
-            <details>
-              <summary>Mikor kapjuk meg a kész anyagokat?</summary>
-              <p>
-                Az elkészült, válogatott képeket általában 3–6 héten belül, a
-                videókat 4–8 héten belül adom át – a pontos határidőt mindig a
-                szerződésben rögzítjük.
-              </p>
-            </details>
-            <details>
-              <summary>Kapunk minden nyers fotót és videót is?</summary>
-              <p>
-                A csomagok a gondosan válogatott és retusált képeket / vágott
-                videókat tartalmazzák. A nyers anyagokat alapvetően nem adom át,
-                de egyedi kérés esetén meg tudjuk beszélni.
-              </p>
-            </details>
-          </div>
-        </div>
-      </section>
-    </main>
-
-    <footer class="site-footer">
-      <div class="container footer-inner">
-        <p>
-          &copy; <span id="year"></span> dr-photo – minden jog fenntartva.
-        </p>
-        <a href="#top" class="back-to-top" data-scroll>Vissza az elejére</a>
-      </div>
-    </footer>
-    <!-- HOZZÁADVA: GLightbox JS -->
-<script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
-<script>
-  const lightbox = GLightbox({
-    selector: '.glightbox'
-  });
-</script>
-
-<script src="app.js"></script>
-</body>
-</html>
-
-    <script src="app.js"></script>
-  </body>
-</html>
+              <button type="submit" class="
