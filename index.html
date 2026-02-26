@@ -146,97 +146,46 @@
 
       <!-- Munkáim / Galéria -->
       <section class="section work" id="munkak">
-        <div class="container">
-          <div class="section-header">
-            <p class="eyebrow">Munkáim</p>
-            <h2>Válogatás a kedvenc projektjeimből</h2>
-            <p>
-              Esküvők, portrék, rendezvények és videóklipek – mind
-              ugyanabban a modern, letisztult, filmes hangulatban.
-            </p>
-          </div>
+  <div class="container">
+    <div class="section-header">
+      <p class="eyebrow">Munkáim</p>
+      <h2>Válogatás a munkáimból</h2>
+    </div>
 
-          <div class="work-filters" aria-label="Galéria szűrők">
-            <button class="filter-pill is-active" data-filter="all">
-              Összes
-            </button>
-            <button class="filter-pill" data-filter="eskuvo">Esküvők</button>
-            <button class="filter-pill" data-filter="portre">Portré</button>
-            <button class="filter-pill" data-filter="rendezveny">
-              Rendezvények
-            </button>
-            <button class="filter-pill" data-filter="video">Videók</button>
-          </div>
+    <div class="gallery-grid">
 
-         <article class="gallery-item" data-category="eskuvo">
-  <div class="gallery-photo gallery-photo-1">
-    <a href="https://images.pexels.com/photos/1024993/pexels-photo-1024993.jpeg?auto=compress&cs=tinysrgb&w=2000"
-       class="glightbox"
-       data-gallery="gallery1"></a>
+      <!-- FIRST 8 VISIBLE -->
+      <article class="gallery-item"><div class="gallery-photo" style="background-image:url('images/Alexandra és Tomi-20.jpg')"></div></article>
+      <article class="gallery-item"><div class="gallery-photo" style="background-image:url('images/Alexandra és Tomi-22.jpg')"></div></article>
+      <article class="gallery-item"><div class="gallery-photo" style="background-image:url('images/Brigi és Attila-106.jpg')"></div></article>
+      <article class="gallery-item"><div class="gallery-photo" style="background-image:url('images/Brigi és Attila-29.jpg')"></div></article>
+      <article class="gallery-item"><div class="gallery-photo" style="background-image:url('images/Brigi és Attila-41.jpg')"></div></article>
+      <article class="gallery-item"><div class="gallery-photo" style="background-image:url('images/Brigi és Attila-73.jpg')"></div></article>
+      <article class="gallery-item"><div class="gallery-photo" style="background-image:url('images/Brigi és Zoli-33.jpg')"></div></article>
+      <article class="gallery-item"><div class="gallery-photo" style="background-image:url('images/Brigi és Zoli-43.jpg')"></div></article>
+
+      <!-- REST HIDDEN -->
+      <article class="gallery-item hidden"><div class="gallery-photo" style="background-image:url('images/Buli 1-112.jpg')"></div></article>
+      <article class="gallery-item hidden"><div class="gallery-photo" style="background-image:url('images/Buli 1-144.jpg')"></div></article>
+      <article class="gallery-item hidden"><div class="gallery-photo" style="background-image:url('images/Buli 1-206.jpg')"></div></article>
+      <article class="gallery-item hidden"><div class="gallery-photo" style="background-image:url('images/Buli 1-219.jpg')"></div></article>
+      <article class="gallery-item hidden"><div class="gallery-photo" style="background-image:url('images/Buli 1-225.jpg')"></div></article>
+      <article class="gallery-item hidden"><div class="gallery-photo" style="background-image:url('images/Buli 1-248.jpg')"></div></article>
+      <article class="gallery-item hidden"><div class="gallery-photo" style="background-image:url('images/Buli 1-291.jpg')"></div></article>
+      <article class="gallery-item hidden"><div class="gallery-photo" style="background-image:url('images/Buli 1-300.jpg')"></div></article>
+
+      <!-- You can paste the rest exactly the same way -->
+      
+    </div>
+
+    <div class="gallery-more-wrapper">
+      <button id="showMoreBtn" class="gallery-more-btn">
+        További képek
+      </button>
+    </div>
+
   </div>
-  <div class="gallery-meta">
-    <h3>Városi esküvő – naplemente</h3>
-    <p>Intim, filmes hangulatú sorozat a város fényeiben.</p>
-  </div>
-</article>
-            <article class="gallery-item" data-category="eskuvo">
-              <div class="gallery-photo gallery-photo-2"></div>
-              <div class="gallery-meta">
-                <h3>Szabadtéri ceremónia</h3>
-                <p>Természetes fények, finom színek, letisztult kompozíciók.</p>
-              </div>
-            </article>
-
-            <!-- Portré -->
-            <article class="gallery-item" data-category="portre">
-              <div class="gallery-photo gallery-photo-3"></div>
-              <div class="gallery-meta">
-                <h3>Portré – stúdiófényekkel</h3>
-                <p>Karakteres, kontrasztos portrék visszafogott háttérrel.</p>
-              </div>
-            </article>
-            <article class="gallery-item" data-category="portre">
-              <div class="gallery-photo gallery-photo-4"></div>
-              <div class="gallery-meta">
-                <h3>Branding fotózás</h3>
-                <p>Üzleti portrék, amelyek őszinték, mégis profik.</p>
-              </div>
-            </article>
-
-            <!-- Rendezvény -->
-            <article class="gallery-item" data-category="rendezveny">
-              <div class="gallery-photo gallery-photo-5"></div>
-              <div class="gallery-meta">
-                <h3>Rendezvény – koncert</h3>
-                <p>Dinamikus képek, fények és hangulat egyben.</p>
-              </div>
-            </article>
-            <article class="gallery-item" data-category="rendezveny">
-              <div class="gallery-photo gallery-photo-6"></div>
-              <div class="gallery-meta">
-                <h3>Céges esemény</h3>
-                <p>Professzionális, diszkrét jelenlét, erős vizuális anyag.</p>
-              </div>
-            </article>
-
-            <!-- Videó -->
-            <article class="gallery-item" data-category="video">
-              <div class="gallery-photo gallery-photo-7"></div>
-              <div class="gallery-meta">
-                <h3>Esküvői highlight film</h3>
-                <p>3–5 perces filmes összefoglaló a nap legszebb pillanataiból.</p>
-              </div>
-            </article>
-            <article class="gallery-item" data-category="video">
-              <div class="gallery-photo gallery-photo-8"></div>
-              <div class="gallery-meta">
-                <h3>Rendezvény aftermovie</h3>
-                <p>Rövid, ütős videó social médiára optimalizálva.</p>
-              </div>
-            </article>
-          </div>
-        </div>
-      </section>
+</section>
 
       <!-- Videók -->
       <section class="section videos" id="videok">
