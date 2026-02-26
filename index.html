@@ -170,6 +170,19 @@
         <div class="gallery-item hidden"><div class="gallery-photo" style="background-image: url('Brigi és Zoli-90.jpg');"></div></div>
         <!-- Ide jöhet a többi kép hasonlóan -->
       </div>
+      <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const showMoreBtn = document.getElementById("showMoreBtn");
+
+      showMoreBtn.addEventListener("click", () => {
+        document.querySelectorAll(".gallery-item.hidden").forEach(item => {
+          item.classList.remove("hidden");
+        });
+        showMoreBtn.style.display = "none";
+      });
+    });
+  </script>
+
 
       <!-- További képek gomb -->
       <div style="text-align:center; margin-top: 1.5rem;">
