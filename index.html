@@ -9,6 +9,13 @@
       content="dr-photo – kreatív fotó és videó: esküvők, portrék, rendezvények és filmes hangulatú videók egy helyen."
     />
     <link rel="stylesheet" href="styles.css" />
+
+    <!-- HOZZÁADVA: GLightbox CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css"
+    />
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -16,6 +23,8 @@
       rel="stylesheet"
     />
   </head>
+
+  <body>
   <body>
     <header class="site-header" id="top">
       <div class="container header-inner">
@@ -159,15 +168,17 @@
             <button class="filter-pill" data-filter="video">Videók</button>
           </div>
 
-          <div class="gallery-grid">
-            <!-- Esküvő -->
-            <article class="gallery-item" data-category="eskuvo">
-              <div class="gallery-photo gallery-photo-1"></div>
-              <div class="gallery-meta">
-                <h3>Városi esküvő – naplemente</h3>
-                <p>Intim, filmes hangulatú sorozat a város fényeiben.</p>
-              </div>
-            </article>
+         <article class="gallery-item" data-category="eskuvo">
+  <div class="gallery-photo gallery-photo-1">
+    <a href="https://images.pexels.com/photos/1024993/pexels-photo-1024993.jpeg?auto=compress&cs=tinysrgb&w=2000"
+       class="glightbox"
+       data-gallery="gallery1"></a>
+  </div>
+  <div class="gallery-meta">
+    <h3>Városi esküvő – naplemente</h3>
+    <p>Intim, filmes hangulatú sorozat a város fényeiben.</p>
+  </div>
+</article>
             <article class="gallery-item" data-category="eskuvo">
               <div class="gallery-photo gallery-photo-2"></div>
               <div class="gallery-meta">
