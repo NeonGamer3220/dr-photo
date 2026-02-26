@@ -1150,4 +1150,16 @@ a {
     flex-direction: column;
     align-items: flex-start;
   }
+  /* HOZZÁADVA – Lightbox clickable overlay */
+
+.gallery-photo {
+  position: relative;
+}
+
+.gallery-photo a.glightbox {
+  position: absolute;
+  inset: 0;
+  display: block;
+  z-index: 2;
+}
 }
