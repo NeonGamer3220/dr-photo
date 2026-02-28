@@ -1,401 +1,362 @@
 <!DOCTYPE html>
 <html lang="hu">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>dr-photo – Fotó & Videó</title>
-    <meta
-      name="description"
-      content="dr-photo – kreatív fotó és videó: esküvők, portrék, rendezvények és filmes hangulatú videók egy helyen."
-    />
-    <link rel="stylesheet" href="styles.css" />
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>dr-photo – Fotó & Videó</title>
 
-    <!-- HOZZÁADVA: GLightbox CSS -->
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css"
-    />
+<meta name="description"
+content="dr-photo – kreatív fotó és videó: esküvők, portrék, rendezvények és filmes hangulatú videók egy helyen.">
 
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600&display=swap"
-      rel="stylesheet"
-    />
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
-    <style>
-      /* Galéria CSS javítva */
-      .gallery-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-        gap: 10px;
-      }
+<!-- GLightbox CSS -->
+<link rel="stylesheet"
+href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css"/>
 
-      .gallery-item {
-        border-radius: 12px;
-        overflow: hidden;
-        height: 150px;
-        background-size: cover;
-        background-position: center;
-        transition: transform 0.2s ease;
-      }
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{
+font-family:'Poppins',sans-serif;
+background:#0f172a;
+color:#f1f5f9;
+line-height:1.6;
+}
 
-      .gallery-item:hover {
-        transform: scale(1.03);
-      }
+.container{
+width:90%;
+max-width:1200px;
+margin:auto;
+}
 
-      .hidden {
-        display: none;
-      }
+/* HEADER */
+header{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+background:rgba(15,23,42,0.9);
+backdrop-filter:blur(10px);
+z-index:1000;
+padding:1rem 0;
+}
 
-      .gallery-more-btn {
-        padding: 0.8rem 1.4rem;
-        border-radius: 999px;
-        border: none;
-        cursor: pointer;
-        background: linear-gradient(130deg, #f97316, #ec4899, #6366f1);
-        color: #020617;
-        font-weight: 600;
-        margin-top: 1.5rem;
-      }
-    </style>
-  </head>
+header .container{
+display:flex;
+justify-content:space-between;
+align-items:center;
+}
 
-  <body>
-    <header class="site-header" id="top">
-      <div class="container header-inner">
-        <a href="#kezdolap" class="brand" data-scroll>
-          <span class="brand-mark">dr</span>
-          <div>
-            <h1 class="brand-title">dr-photo</h1>
-            <p class="brand-tagline">Cinematic fotó & videó</p>
-          </div>
-        </a>
+header h1{
+font-size:1.4rem;
+font-weight:600;
+}
 
-        <button class="nav-toggle" aria-label="Menü megnyitása">
-          <span></span>
-          <span></span>
-        </button>
+nav a{
+color:#f1f5f9;
+text-decoration:none;
+margin-left:1.5rem;
+font-size:0.9rem;
+transition:0.3s;
+}
 
-        <nav class="main-nav">
-          <a href="#kezdolap" data-scroll>Kezdőlap</a>
-          <a href="#magamrol" data-scroll>Magamról</a>
-          <a href="#munkak" data-scroll>Munkáim</a>
-          <a href="#videok" data-scroll>Videók</a>
-          <a href="#informaciok" data-scroll>Információk</a>
-          <a href="#elerhetoseg" data-scroll>Elérhetőségeim</a>
-          <a href="#gyik" data-scroll>GYIK</a>
-        </nav>
-      </div>
-    </header>
+nav a:hover{
+color:#f97316;
+}
 
-    <main>
-      <!-- Hero / Kezdőlap -->
-      <section class="section hero" id="kezdolap">
-        <div class="container hero-inner">
-          <div class="hero-copy">
-            <p class="eyebrow">Fotó & videó • történetmesélés</p>
-            <h2>
-              Megállítom a pillanatot, <span>filmre írom</span> az emlékeidet.
-            </h2>
-            <p class="hero-text">
-              Esküvők, portrék, rendezvények és filmes hangulatú videók – letisztult,
-              modern stílusban, természetes színekkel és karakteres fényekkel.
-            </p>
+/* HERO */
+.hero{
+min-height:100vh;
+display:flex;
+align-items:center;
+text-align:center;
+background:linear-gradient(135deg,#1e293b,#0f172a);
+padding-top:120px;
+}
 
-            <div class="hero-actions">
-              <a href="#munkak" class="btn btn-primary" data-scroll>
-                Munkáim megtekintése
-              </a>
-              <a href="#elerhetoseg" class="btn btn-ghost" data-scroll>
-                Időpont egyeztetés
-              </a>
-            </div>
-          </div>
+.hero h2{
+font-size:2.5rem;
+margin-bottom:1rem;
+}
 
-          <div class="hero-media">
-            <div class="hero-frame">
-              <div class="hero-photo hero-photo-main"></div>
-              <div class="hero-photo hero-photo-secondary"></div>
-              <div class="hero-badge">
-                <span>Foto & Video</span>
-                <strong>DR-PHOTO</strong>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+.hero span{
+color:#f97316;
+}
 
-      <!-- Magamról -->
-      <section class="section about" id="magamrol">
-        <div class="container about-inner">
-          <div class="about-content">
-            <p class="eyebrow">Magamról</p>
-            <h2>Ki áll a kamera mögött?</h2>
-            <p>
-              Rövid bemutatkozó szöveg a fotósról/videósról. Ide jöhet pár
-              mondat arról, hogy miben hisz, mi a stílusa, és miért szereti
-              megörökíteni az emberek legfontosabb pillanatait.
-            </p>
-            <p>
-              A célom, hogy a fotózás és forgatás is
-              nyugodt, természetes élmény legyen. Nem erőltetett pózok, hanem
-              őszinte pillanatok, filmes hangulatban.
-            </p>
+.hero p{
+opacity:0.8;
+margin-bottom:2rem;
+}
 
-            <div class="about-tags">
-              <span>Esküvői fotó & film</span>
-              <span>Portré & branding</span>
-              <span>Rendezvény & aftermovie</span>
-              <span>Drónfelvételek (ha van)</span>
-            </div>
-          </div>
+.btn{
+display:inline-block;
+padding:0.8rem 1.5rem;
+border-radius:999px;
+text-decoration:none;
+font-weight:600;
+margin:0.5rem;
+transition:0.3s;
+}
 
-          <div class="about-media">
-            <div class="about-photo"></div>
-            <div class="about-note">
-              <p>
-                „A legjobb pillanatok azok, amikre már nem is emlékeznél –
-                egészen addig, amíg vissza nem nézed a képeket.”
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
+.btn-primary{
+background:linear-gradient(130deg,#f97316,#ec4899,#6366f1);
+color:#0f172a;
+}
 
-      <!-- Munkáim / Galéria -->
-      <section class="work" id="munkak">
-        <div class="container">
-          <div class="gallery-grid">
-            <!-- 8 alapból látható kép -->
-            <div class="gallery-item" style="background-image: url('Alexandra és Tomi-20.jpg');"></div>
-            <div class="gallery-item" style="background-image: url('Alexandra és Tomi-22.jpg');"></div>
-            <div class="gallery-item" style="background-image: url('Brigi és Attila-106.jpg');"></div>
-            <div class="gallery-item" style="background-image: url('Brigi és Attila-29.jpg');"></div>
-            <div class="gallery-item" style="background-image: url('Brigi és Attila-41.jpg');"></div>
-            <div class="gallery-item" style="background-image: url('Brigi és Attila-73.jpg');"></div>
-            <div class="gallery-item" style="background-image: url('Brigi és Attila-83.jpg');"></div>
-            <div class="gallery-item" style="background-image: url('Brigi és Tomi-13.jpg');"></div>
+.btn-primary:hover{
+transform:translateY(-3px);
+}
 
-            <!-- rejtett további képek -->
-            <div class="gallery-item hidden" style="background-image: url('Brigi és Tomi-19.jpg');"></div>
-            <div class="gallery-item hidden" style="background-image: url('Brigi és Tomi-41.jpg');"></div>
-            <div class="gallery-item hidden" style="background-image: url('Brigi és Zoli-33.jpg');"></div>
-            <div class="gallery-item hidden" style="background-image: url('Brigi és Zoli-43.jpg');"></div>
-            <div class="gallery-item hidden" style="background-image: url('Brigi és Zoli-63.jpg');"></div>
-            <div class="gallery-item hidden" style="background-image: url('Brigi és Zoli-67.jpg');"></div>
-            <div class="gallery-item hidden" style="background-image: url('Brigi és Zoli-72.jpg');"></div>
-            <div class="gallery-item hidden" style="background-image: url('Brigi és Zoli-75.jpg');"></div>
-          </div>
+.btn-ghost{
+border:1px solid #f97316;
+color:#f97316;
+}
 
-          <div style="text-align:center; margin-top: 1.5rem;">
-            <button id="showMoreBtn" class="gallery-more-btn">További képek</button>
-          </div>
-        </div>
-      </section>
+.btn-ghost:hover{
+background:#f97316;
+color:#0f172a;
+}
 
-      <!-- Videók -->
-      <section class="section videos" id="videok">
-        <div class="container">
-          <div class="section-header">
-            <p class="eyebrow">Videók</p>
-            <h2>Filmes hangulat mozgóképen</h2>
-            <p>
-              Két beágyazott YouTube videó – esküvői highlight és egyéb referencia
-              anyagok. Bármikor lecserélheted más linkekre.
-            </p>
-          </div>
+/* SECTION */
+section{
+padding:6rem 0;
+}
 
-          <div class="video-grid">
-            <article class="video-card">
-              <div class="video-frame">
-                <iframe
-                  src="https://www.youtube.com/embed/haW9j7EcPAw"
-                  title="Esküvői highlight videó"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                  allowfullscreen
-                ></iframe>
-              </div>
-              <div class="video-meta">
-                <h3>Esküvői highlight</h3>
-                <p>Rövid, filmes összefoglaló a nagy napról.</p>
-              </div>
-            </article>
+.section-header{
+text-align:center;
+margin-bottom:3rem;
+}
 
-            <article class="video-card">
-              <div class="video-frame">
-                <iframe
-                  src="https://www.youtube.com/watch?v=diFmJGZe_oI&t=4s"
-                  title="Rendezvény / referencia videó"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                  allowfullscreen
-                ></iframe>
-              </div>
-              <div class="video-meta">
-                <h3>Rendezvény / referencia</h3>
-                <p>Dinamikus, pörgős anyag social mediára és bemutatkozáshoz.</p>
-              </div>
-            </article>
-          </div>
-        </div>
-      </section>
+/* GALLERY */
+.gallery-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:20px;
+}
 
-      <!-- Információk / Csomagok -->
-      <section class="section info" id="informaciok">
-        <div class="container">
-          <div class="section-header">
-            <p class="eyebrow">Információk</p>
-            <h2>Csomagok & munkamenet</h2>
-            <p>
-              Az árak és csomagok csak irányadóak – minden projekt egyedi,
-              ezért mindig személyre szabott ajánlatot készítek.
-            </p>
-          </div>
+.gallery-item{
+position:relative;
+width:100%;
+padding-top:70%;
+border-radius:16px;
+overflow:hidden;
+background-size:cover;
+background-position:center;
+cursor:pointer;
+transition:0.3s;
+}
 
-          <div class="packages-grid">
-            <article class="package-card">
-              <h3>Portré / branding</h3>
-              <p class="package-price">kezdve 40 000 Ft-tól</p>
-              <ul>
-                <li>1–2 óra fotózás</li>
-                <li>Válogatott, retusált képek</li>
-                <li>Online galéria</li>
-              </ul>
-            </article>
+.gallery-item:hover{
+transform:translateY(-6px);
+box-shadow:0 20px 40px rgba(0,0,0,0.4);
+}
 
-            <article class="package-card package-card-highlight">
-              <h3>Esküvői csomag</h3>
-              <p class="package-price">egyedi árazás</p>
-              <ul>
-                <li>Teljes napos fotózás / videózás</li>
-                <li>Esküvői highlight film (ha kéred)</li>
-                <li>Online galéria + pendrive / átadás</li>
-              </ul>
-            </article>
+.hidden{
+display:none;
+}
 
-            <article class="package-card">
-              <h3>Rendezvény / aftermovie</h3>
-              <p class="package-price">egyedi árazás</p>
-              <ul>
-                <li>Fotó + videó opció</li>
-                <li>Social media rövid videók</li>
-                <li>Gyors, megbízható utómunka</li>
-              </ul>
-            </article>
-          </div>
+.gallery-more-btn{
+margin-top:2rem;
+padding:0.8rem 1.5rem;
+border:none;
+border-radius:999px;
+cursor:pointer;
+font-weight:600;
+background:linear-gradient(130deg,#f97316,#ec4899,#6366f1);
+color:#0f172a;
+}
 
-          <div class="process">
-            <div class="process-step">
-              <span class="process-number">01</span>
-              <h3>Kapcsolatfelvétel</h3>
-              <p>Írj pár sort az eseményről, dátumról és elképzeléseidről.</p>
-            </div>
-            <div class="process-step">
-              <span class="process-number">02</span>
-              <h3>Egyeztetés</h3>
-              <p>Online / személyes beszélgetés, ahol átbeszéljük a részleteket.</p>
-            </div>
-            <div class="process-step">
-              <span class="process-number">03</span>
-              <h3>Fotózás & utómunka</h3>
-              <p>
-                A forgatás után gondos válogatás és színkorrekció, majd kényelmes
-                online átadás.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
+/* VIDEÓ */
+.video-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+gap:30px;
+}
 
-      <!-- Elérhetőségeim -->
-      <section class="section contact" id="elerhetoseg">
-        <div class="container contact-inner">
-          <div class="contact-info">
-            <div class="section-header">
-              <p class="eyebrow">Elérhetőségeim</p>
-              <h2>Vedd fel velem a kapcsolatot</h2>
-              <p>
-                Írj bátran, ha fotózásról vagy forgatásról gondolkodsz – pár
-                sor az eseményről, dátumról és elképzeléseidről már elég
-                kezdésnek.
-              </p>
-            </div>
+.video-frame iframe{
+width:100%;
+height:250px;
+border-radius:12px;
+}
 
-            <ul class="contact-list">
-              <li>
-                <span class="contact-label">Email</span>
-                <a href="mailto:doczi.robert@gmail.com">doczi.robert@gmail.com</a>
-              </li>
-              <li>
-                <span class="contact-label">Telefon</span>
-                <a href="tel:+36205425908">+36 20 542 5908</a>
-              </li>
-              <li>
-                <span class="contact-label">Helyszín</span>
-                <span>Budapest és környéke • Országosan megbeszélés szerint</span>
-              </li>
-              <li>
-                <span class="contact-label">Közösségi média</span>
-                <div class="contact-socials">
-                  <a href="#" aria-label="Instagram">Instagram</a>
-                  <a href="#" aria-label="Facebook">Facebook</a>
-                  <a href="#" aria-label="YouTube">YouTube</a>
-                </div>
-              </li>
-            </ul>
-          </div>
+/* CONTACT */
+.contact{
+background:#1e293b;
+}
 
-          <div class="contact-form-card">
-            <form class="contact-form" action="#" method="post" novalidate>
-              <div class="form-row">
-                <div class="field">
-                  <label for="name">Név</label>
-                  <input
-                    type="text"
-                    id="name"
-                    name="name"
-                    placeholder="Teljes neved"
-                    required
-                  />
-                </div>
-                <div class="field">
-                  <label for="email">Email</label>
-                  <input
-                    type="email"
-                    id="email"
-                    name="email"
-                    placeholder="email@cimed.hu"
-                    required
-                  />
-                </div>
-              </div>
+.contact-list{
+list-style:none;
+}
 
-              <div class="form-row">
-                <div class="field">
-                  <label for="date">Dátum (ha fix)</label>
-                  <input type="date" id="date" name="date" />
-                </div>
-                <div class="field">
-                  <label for="type">Milyen fotózás / videó?</label>
-                  <select id="type" name="type">
-                    <option value="">Válassz...</option>
-                    <option value="eskuvo">Esküvő</option>
-                    <option value="portre">Portré / branding</option>
-                    <option value="rendezveny">Rendezvény</option>
-                    <option value="video">Videó / aftermovie</option>
-                    <option value="egyeb">Egyéb</option>
-                  </select>
-                </div>
-              </div>
+.contact-list li{
+margin-bottom:1rem;
+}
 
-              <div class="field">
-                <label for="message">Üzenet</label>
-                <textarea
-                  id="message"
-                  name="message"
-                  rows="4"
-                  placeholder="Írd le röviden az elképzelésed, helyszínt, létszámot..."
-                ></textarea>
-              </div>
+footer{
+text-align:center;
+padding:2rem 0;
+background:#0f172a;
+opacity:0.7;
+font-size:0.8rem;
+}
+</style>
+</head>
 
-              <button type="submit" class="
+<body>
+
+<header>
+<div class="container">
+<h1>dr-photo</h1>
+<nav>
+<a href="#kezdolap">Kezdőlap</a>
+<a href="#munkak">Munkáim</a>
+<a href="#videok">Videók</a>
+<a href="#elerhetoseg">Kapcsolat</a>
+</nav>
+</div>
+</header>
+
+<!-- HERO -->
+<section class="hero" id="kezdolap">
+<div class="container">
+<h2>Megállítom a pillanatot, <span>filmre írom</span> az emlékeidet.</h2>
+<p>Esküvők, portrék, rendezvények és filmes hangulatú videók modern stílusban.</p>
+<a href="#munkak" class="btn btn-primary">Munkáim</a>
+<a href="#elerhetoseg" class="btn btn-ghost">Kapcsolat</a>
+</div>
+</section>
+
+<!-- GALÉRIA -->
+<section id="munkak">
+<div class="container">
+<div class="section-header">
+<h2>Munkáim</h2>
+</div>
+
+<div class="gallery-grid">
+
+<a href="Alexandra és Tomi-20.jpg" class="gallery-item glightbox"
+style="background-image:url('Alexandra és Tomi-20.jpg')"></a>
+
+<a href="Alexandra és Tomi-22.jpg" class="gallery-item glightbox"
+style="background-image:url('Alexandra és Tomi-22.jpg')"></a>
+
+<a href="Brigi és Attila-106.jpg" class="gallery-item glightbox"
+style="background-image:url('Brigi és Attila-106.jpg')"></a>
+
+<a href="Brigi és Attila-29.jpg" class="gallery-item glightbox"
+style="background-image:url('Brigi és Attila-29.jpg')"></a>
+
+<a href="Brigi és Attila-41.jpg" class="gallery-item glightbox"
+style="background-image:url('Brigi és Attila-41.jpg')"></a>
+
+<a href="Brigi és Attila-73.jpg" class="gallery-item glightbox"
+style="background-image:url('Brigi és Attila-73.jpg')"></a>
+
+<a href="Brigi és Attila-83.jpg" class="gallery-item glightbox"
+style="background-image:url('Brigi és Attila-83.jpg')"></a>
+
+<a href="Brigi és Tomi-13.jpg" class="gallery-item glightbox"
+style="background-image:url('Brigi és Tomi-13.jpg')"></a>
+
+<!-- REJTETT -->
+<a href="Brigi és Tomi-19.jpg" class="gallery-item glightbox hidden"
+style="background-image:url('Brigi és Tomi-19.jpg')"></a>
+
+<a href="Brigi és Tomi-41.jpg" class="gallery-item glightbox hidden"
+style="background-image:url('Brigi és Tomi-41.jpg')"></a>
+
+<a href="Brigi és Zoli-33.jpg" class="gallery-item glightbox hidden"
+style="background-image:url('Brigi és Zoli-33.jpg')"></a>
+
+<a href="Brigi és Zoli-43.jpg" class="gallery-item glightbox hidden"
+style="background-image:url('Brigi és Zoli-43.jpg')"></a>
+
+<a href="Brigi és Zoli-63.jpg" class="gallery-item glightbox hidden"
+style="background-image:url('Brigi és Zoli-63.jpg')"></a>
+
+<a href="Brigi és Zoli-67.jpg" class="gallery-item glightbox hidden"
+style="background-image:url('Brigi és Zoli-67.jpg')"></a>
+
+<a href="Brigi és Zoli-72.jpg" class="gallery-item glightbox hidden"
+style="background-image:url('Brigi és Zoli-72.jpg')"></a>
+
+<a href="Brigi és Zoli-75.jpg" class="gallery-item glightbox hidden"
+style="background-image:url('Brigi és Zoli-75.jpg')"></a>
+
+</div>
+
+<div style="text-align:center;">
+<button id="showMoreBtn" class="gallery-more-btn">
+További képek
+</button>
+</div>
+
+</div>
+</section>
+
+<!-- VIDEÓ -->
+<section id="videok">
+<div class="container">
+<div class="section-header">
+<h2>Videók</h2>
+</div>
+
+<div class="video-grid">
+<div class="video-frame">
+<iframe src="https://www.youtube.com/embed/haW9j7EcPAw"
+allowfullscreen></iframe>
+</div>
+
+<div class="video-frame">
+<iframe src="https://www.youtube.com/embed/diFmJGZe_oI"
+allowfullscreen></iframe>
+</div>
+</div>
+</div>
+</section>
+
+<!-- KAPCSOLAT -->
+<section id="elerhetoseg" class="contact">
+<div class="container">
+<h2>Kapcsolat</h2>
+<ul class="contact-list">
+<li>Email: doczi.robert@gmail.com</li>
+<li>Telefon: +36 20 542 5908</li>
+<li>Budapest és országosan</li>
+</ul>
+</div>
+</section>
+
+<footer>
+© 2026 dr-photo – Minden jog fenntartva
+</footer>
+
+<!-- GLightbox JS -->
+<script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
+
+<script>
+const lightbox = GLightbox({
+selector: '.glightbox'
+});
+
+const showMoreBtn = document.getElementById("showMoreBtn");
+const hiddenImages = document.querySelectorAll(".gallery-item.hidden");
+
+let expanded = false;
+
+showMoreBtn.addEventListener("click", function(){
+expanded = !expanded;
+
+hiddenImages.forEach(img=>{
+img.style.display = expanded ? "block" : "none";
+});
+
+showMoreBtn.textContent = expanded
+? "Kevesebb kép"
+: "További képek";
+});
+</script>
+
+</body>
+</html>
