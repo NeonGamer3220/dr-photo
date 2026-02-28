@@ -132,12 +132,12 @@ a {
   cursor: pointer; /* click anywhere to close */
 }
 
-#overlay-img {
+#img-overlay img {
   max-width: 95%;
   max-height: 95%;
   border-radius: 12px;
   box-shadow: 0 8px 40px rgba(0,0,0,0.8);
-  pointer-events: none; /* prevents blocking the overlay click */
+  pointer-events: none; /* ensures clicks go through image to overlay */
 }
 
 .header-inner {
