@@ -580,6 +580,8 @@ a {
   color: var(--text-soft);
 }
 
+.drphotokep { background-image: url("images/IMG_4687-768x512.jpg"); }
+
 /* Gallery image placeholders */
 .gallery-photo-1 { background-image: url("images/Alexandra és Tomi-20.jpg"); }
 .gallery-photo-2 { background-image: url("images/Alexandra és Tomi-22.jpg"); }
