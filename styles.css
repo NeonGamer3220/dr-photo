@@ -601,12 +601,14 @@ a {
 }
 
 .gallery-photo {
-  height: 170px;
+  width: 100%;
+  padding-top: 75%; /* 4:3 aspect ratio */
   background-size: cover;
   background-position: center;
-  background-repeat: no-repeat;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
-
 .gallery-meta {
   padding: 0.7rem 0.85rem 0.8rem;
 }
