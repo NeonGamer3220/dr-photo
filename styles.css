@@ -594,9 +594,9 @@ a {
     background 0.18s ease;
 }
 
-.gallery-item:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 26px 60px rgba(30, 64, 175, 0.9);
+.gallery-photo:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.5);
   border-color: rgba(129, 140, 248, 0.95);
 }
 
