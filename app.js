@@ -23,6 +23,26 @@ function setupSmoothScroll() {
   });
 }
 
+// Fullscreen gallery click
+document.querySelectorAll('.gallery-photo').forEach(photo => {
+  photo.addEventListener('click', () => {
+    const overlay = document.getElementById('img-overlay');
+    const overlayImg = document.getElementById('overlay-img');
+
+    // Get the background image URL
+    const bg = photo.style.backgroundImage;
+    const url = bg.slice(5, -2); // remove url("...") wrapper
+    overlayImg.src = url;
+
+    overlay.style.display = 'flex';
+  });
+});
+
+// Close overlay on click
+document.getElementById('img-overlay').addEventListener('click', () => {
+  document.getElementById('img-overlay').style.display = 'none';
+});
+
 // Mobile navigation (small screens)
 function setupMobileNav() {
   const toggle = document.querySelector(".nav-toggle");
