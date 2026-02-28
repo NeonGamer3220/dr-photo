@@ -1,257 +1,209 @@
 <!DOCTYPE html>
 <html lang="hu">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>dr-photo – Fotó & Videó</title>
-    <meta
-      name="description"
-      content="dr-photo – kreatív fotó és videó: esküvők, portrék, rendezvények és filmes hangulatú videók egy helyen."
-    />
-    <link rel="stylesheet" href="styles.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600&display=swap"
-      rel="stylesheet"
-    />
-  </head>
-  <body>
-    <!-- Header -->
-    <header class="site-header" id="top">
-      <div class="container header-inner">
-        <a href="#kezdolap" class="brand" data-scroll>
-          <span class="brand-mark">dr</span>
-          <div>
-            <h1 class="brand-title">dr-photo</h1>
-            <p class="brand-tagline">Cinematic fotó & videó</p>
-          </div>
-        </a>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>dr-photo – Fotó & Videó</title>
+<link rel="stylesheet" href="styles.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
 
-        <button class="nav-toggle" aria-label="Menü megnyitása">
-          <span></span>
-          <span></span>
-        </button>
-
-        <nav class="main-nav">
-          <a href="#kezdolap" data-scroll>Kezdőlap</a>
-          <a href="#magamrol" data-scroll>Magamról</a>
-          <a href="#munkak" data-scroll>Munkáim</a>
-          <a href="#videok" data-scroll>Videók</a>
-          <a href="#informaciok" data-scroll>Információk</a>
-          <a href="#elerhetoseg" data-scroll>Elérhetőségeim</a>
-          <a href="#gyik" data-scroll>GYIK</a>
-        </nav>
+<!-- Header -->
+<header class="site-header" id="top">
+  <div class="container header-inner">
+    <a href="#kezdolap" class="brand" data-scroll>
+      <span class="brand-mark">dr</span>
+      <div>
+        <h1 class="brand-title">dr-photo</h1>
+        <p class="brand-tagline">Cinematic fotó & videó</p>
       </div>
-    </header>
+    </a>
+    <button class="nav-toggle" aria-label="Menü megnyitása">
+      <span></span><span></span>
+    </button>
+    <nav class="main-nav">
+      <a href="#kezdolap" data-scroll>Kezdőlap</a>
+      <a href="#magamrol" data-scroll>Magamról</a>
+      <a href="#munkak" data-scroll>Munkáim</a>
+      <a href="#videok" data-scroll>Videók</a>
+      <a href="#informaciok" data-scroll>Információk</a>
+      <a href="#elerhetoseg" data-scroll>Elérhetőségeim</a>
+      <a href="#gyik" data-scroll>GYIK</a>
+    </nav>
+  </div>
+</header>
 
-    <main>
-      <!-- Hero / Kezdőlap -->
-      <section class="section hero" id="kezdolap">
-        <div class="container hero-inner">
-          <div class="hero-copy">
-            <p class="eyebrow">Fotó & videó • történetmesélés</p>
-            <h2>
-              Megállítom a pillanatot, <span>filmre írom</span> az
-              emlékeidet.
-            </h2>
-            <p class="hero-text">
-              Esküvők, portrék, rendezvények és filmes hangulatú videók –
-              letisztult, modern stílusban, természetes színekkel és
-              karakteres fényekkel.
-            </p>
-
-            <div class="hero-actions">
-              <a href="#munkak" class="btn btn-primary" data-scroll>
-                Munkáim megtekintése
-              </a>
-              <a href="#elerhetoseg" class="btn btn-ghost" data-scroll>
-                Időpont egyeztetés
-              </a>
-            </div>
-
-            <div class="hero-stats">
-              <div class="stat">
-                <span class="stat-number">10+</span>
-                <span class="stat-label">év tapasztalat</span>
-              </div>
-              <div class="stat">
-                <span class="stat-number">200+</span>
-                <span class="stat-label">esküvő & rendezvény</span>
-              </div>
-              <div class="stat">
-                <span class="stat-number">∞</span>
-                <span class="stat-label">elkapott pillanat</span>
-              </div>
-            </div>
-          </div>
-
-          <div class="hero-media">
-            <div class="hero-frame">
-              <div class="hero-photo hero-photo-main"></div>
-              <div class="hero-photo hero-photo-secondary"></div>
-              <div class="hero-badge">
-                <span>Foto & Video</span>
-                <strong>DR-PHOTO</strong>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Magamról -->
-      <section class="section about" id="magamrol">
-        <div class="container about-inner">
-          <div class="about-content">
-            <p class="eyebrow">Magamról</p>
-            <h2>Ki áll a kamera mögött?</h2>
-            <p>
-              Rövid bemutatkozó szöveg a fotósról/videósról. Ide jöhet pár
-              mondat arról, hogy miben hisz, mi a stílusa, és miért szereti
-              megörökíteni az emberek legfontosabb pillanatait.
-            </p>
-            <p>
-              A célom, hogy a fotózás és forgatás is
-              nyugodt, természetes élmény legyen. Nem erőltetett pózok, hanem
-              őszinte pillanatok, filmes hangulatban.
-            </p>
-
-            <div class="about-tags">
-              <span>Esküvői fotó & film</span>
-              <span>Portré & branding</span>
-              <span>Rendezvény & aftermovie</span>
-              <span>Drónfelvételek (ha van)</span>
-            </div>
-          </div>
-
-          <div class="about-media">
-            <div class="about-photo"></div>
-            <div class="about-note">
-              <p>
-                „A legjobb pillanatok azok, amikre már nem is emlékeznél –
-                egészen addig, amíg vissza nem nézed a képeket.”
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Munkáim / Galéria -->
-      <section class="section work" id="munkak">
-        <div class="container">
-          <div class="section-header">
-            <p class="eyebrow">Munkáim</p>
-            <h2>Válogatás a kedvenc projektjeimből</h2>
-            <p>
-              Esküvők, portrék, rendezvények és videóklipek – mind
-              ugyanabban a modern, letisztult, filmes hangulatban.
-            </p>
-          </div>
-
-          <div class="work-filters" aria-label="Galéria szűrők">
-            <button class="filter-pill is-active" data-filter="all">Összes</button>
-            <button class="filter-pill" data-filter="eskuvo">Esküvők</button>
-            <button class="filter-pill" data-filter="portre">Portré</button>
-            <button class="filter-pill" data-filter="rendezveny">Rendezvények</button>
-            <button class="filter-pill" data-filter="video">Videók</button>
-          </div>
-
-          <div class="gallery-grid">
-            <!-- Esküvő -->
-            <article class="gallery-item" data-category="eskuvo">
-              <div class="gallery-photo gallery-photo-1"></div>
-              <div class="gallery-meta">
-                <h3>Városi esküvő – naplemente</h3>
-                <p>Intim, filmes hangulatú sorozat a város fényeiben.</p>
-              </div>
-            </article>
-            <article class="gallery-item" data-category="eskuvo">
-              <div class="gallery-photo gallery-photo-2"></div>
-              <div class="gallery-meta">
-                <h3>Szabadtéri ceremónia</h3>
-                <p>Természetes fények, finom színek, letisztult kompozíciók.</p>
-              </div>
-            </article>
-
-            <!-- Portré -->
-            <article class="gallery-item" data-category="portre">
-              <div class="gallery-photo gallery-photo-3"></div>
-              <div class="gallery-meta">
-                <h3>Portré – stúdiófényekkel</h3>
-                <p>Karakteres, kontrasztos portrék visszafogott háttérrel.</p>
-              </div>
-            </article>
-            <article class="gallery-item" data-category="portre">
-              <div class="gallery-photo gallery-photo-4"></div>
-              <div class="gallery-meta">
-                <h3>Branding fotózás</h3>
-                <p>Üzleti portrék, amelyek őszinték, mégis profik.</p>
-              </div>
-            </article>
-
-            <!-- Rendezvény -->
-            <article class="gallery-item" data-category="rendezveny">
-              <div class="gallery-photo gallery-photo-5"></div>
-              <div class="gallery-meta">
-                <h3>Rendezvény – koncert</h3>
-                <p>Dinamikus képek, fények és hangulat egyben.</p>
-              </div>
-            </article>
-            <article class="gallery-item" data-category="rendezveny">
-              <div class="gallery-photo gallery-photo-6"></div>
-              <div class="gallery-meta">
-                <h3>Céges esemény</h3>
-                <p>Professzionális, diszkrét jelenlét, erős vizuális anyag.</p>
-              </div>
-            </article>
-
-            <!-- Videó -->
-            <article class="gallery-item" data-category="video">
-              <div class="gallery-photo gallery-photo-7"></div>
-              <div class="gallery-meta">
-                <h3>Videó – rendezvény</h3>
-                <p>Élő pillanatok és hangulatos videók.</p>
-              </div>
-            </article>
-          </div>
-
-          <!-- További képek gomb -->
-          <div class="gallery-more-wrapper">
-            <button class="gallery-more-btn">További képek</button>
-          </div>
-        </div>
-      </section>
-
-      <!-- Itt jöhetnek Videók, Info, Contact, FAQ, Footer stb. -->
-      <!-- ... ugyanaz mint a styles.css-hez tartozó struktúra ... -->
-
-    </main>
-
-    <footer class="site-footer">
-      <div class="container footer-inner">
-        <span>&copy; 2026 dr-photo. Minden jog fenntartva.</span>
-        <a href="#top" class="back-to-top">Vissza a tetejére</a>
+<main>
+<!-- Hero -->
+<section class="section hero" id="kezdolap">
+  <div class="container hero-inner">
+    <div class="hero-copy">
+      <p class="eyebrow">Fotó & videó • történetmesélés</p>
+      <h2>Megállítom a pillanatot, <span>filmre írom</span> az emlékeidet.</h2>
+      <p class="hero-text">Esküvők, portrék, rendezvények és filmes hangulatú videók – letisztult, modern stílusban, természetes színekkel és karakteres fényekkel.</p>
+      <div class="hero-actions">
+        <a href="#munkak" class="btn btn-primary" data-scroll>Munkáim megtekintése</a>
+        <a href="#elerhetoseg" class="btn btn-ghost" data-scroll>Időpont egyeztetés</a>
       </div>
-    </footer>
+      <div class="hero-stats">
+        <div class="stat"><span class="stat-number">10+</span><span class="stat-label">év tapasztalat</span></div>
+        <div class="stat"><span class="stat-number">200+</span><span class="stat-label">esküvő & rendezvény</span></div>
+        <div class="stat"><span class="stat-number">∞</span><span class="stat-label">elkapott pillanat</span></div>
+      </div>
+    </div>
+    <div class="hero-media">
+      <div class="hero-frame">
+        <div class="hero-photo hero-photo-main"></div>
+        <div class="hero-photo hero-photo-secondary"></div>
+        <div class="hero-badge"><span>Foto & Video</span><strong>DR-PHOTO</strong></div>
+      </div>
+    </div>
+  </div>
+</section>
 
-    <script>
-      // Egyszerű nav toggle
-      const navToggle = document.querySelector(".nav-toggle");
-      const mainNav = document.querySelector(".main-nav");
+<!-- About -->
+<section class="section about" id="magamrol">
+  <div class="container about-inner">
+    <div class="about-content">
+      <p class="eyebrow">Magamról</p>
+      <h2>Ki áll a kamera mögött?</h2>
+      <p>Rövid bemutatkozó szöveg a fotósról/videósról. Ide jöhet pár mondat arról, hogy miben hisz, mi a stílusa, és miért szereti megörökíteni az emberek legfontosabb pillanatait.</p>
+      <p>A célom, hogy a fotózás és forgatás is nyugodt, természetes élmény legyen. Nem erőltetett pózok, hanem őszinte pillanatok, filmes hangulatban.</p>
+      <div class="about-tags">
+        <span>Esküvői fotó & film</span><span>Portré & branding</span><span>Rendezvény & aftermovie</span><span>Drónfelvételek</span>
+      </div>
+    </div>
+    <div class="about-media">
+      <div class="about-photo"></div>
+      <div class="about-note"><p>„A legjobb pillanatok azok, amikre már nem is emlékeznél – egészen addig, amíg vissza nem nézed a képeket.”</p></div>
+    </div>
+  </div>
+</section>
 
-      navToggle.addEventListener("click", () => {
-        navToggle.classList.toggle("is-open");
-        mainNav.classList.toggle("is-open");
-      });
+<!-- Galéria / Munkák -->
+<section class="section work" id="munkak">
+  <div class="container">
+    <div class="section-header">
+      <p class="eyebrow">Munkáim</p>
+      <h2>Válogatás a kedvenc projektjeimből</h2>
+      <p>Esküvők, portrék, rendezvények és videóklipek – mind ugyanabban a modern, letisztult, filmes hangulatban.</p>
+    </div>
 
-      // Smooth scroll (ha data-scroll)
-      document.querySelectorAll('[data-scroll]').forEach(link => {
-        link.addEventListener("click", e => {
-          e.preventDefault();
-          const target = document.querySelector(link.getAttribute("href"));
-          if(target) target.scrollIntoView({behavior:"smooth"});
-        });
-      });
-    </script>
-  </body>
+    <div class="work-filters">
+      <button class="filter-pill is-active" data-filter="all">Összes</button>
+      <button class="filter-pill" data-filter="eskuvo">Esküvők</button>
+      <button class="filter-pill" data-filter="portre">Portré</button>
+      <button class="filter-pill" data-filter="rendezveny">Rendezvények</button>
+      <button class="filter-pill" data-filter="video">Videók</button>
+    </div>
+
+    <div class="gallery-grid">
+      <!-- Példa 12+6 rejtett -->
+      <article class="gallery-item" data-category="eskuvo"><div class="gallery-photo gallery-photo-1"></div><div class="gallery-meta"><h3>Városi esküvő – naplemente</h3><p>Intim, filmes hangulatú sorozat a város fényeiben.</p></div></article>
+      <article class="gallery-item" data-category="eskuvo"><div class="gallery-photo gallery-photo-2"></div><div class="gallery-meta"><h3>Szabadtéri ceremónia</h3><p>Természetes fények, finom színek, letisztult kompozíciók.</p></div></article>
+      <article class="gallery-item" data-category="portre"><div class="gallery-photo gallery-photo-3"></div><div class="gallery-meta"><h3>Portré – stúdiófényekkel</h3><p>Karakteres, kontrasztos portrék visszafogott háttérrel.</p></div></article>
+      <article class="gallery-item" data-category="portre"><div class="gallery-photo gallery-photo-4"></div><div class="gallery-meta"><h3>Branding fotózás</h3><p>Üzleti portrék, amelyek őszinték, mégis profik.</p></div></article>
+      <article class="gallery-item" data-category="rendezveny"><div class="gallery-photo gallery-photo-5"></div><div class="gallery-meta"><h3>Rendezvény – koncert</h3><p>Dinamikus képek, fények és hangulat egyben.</p></div></article>
+      <article class="gallery-item" data-category="rendezveny"><div class="gallery-photo gallery-photo-6"></div><div class="gallery-meta"><h3>Céges esemény</h3><p>Professzionális, diszkrét jelenlét, erős vizuális anyag.</p></div></article>
+      <article class="gallery-item" data-category="video"><div class="gallery-photo gallery-photo-7"></div><div class="gallery-meta"><h3>Videó – rendezvény</h3><p>Élő pillanatok és hangulatos videók.</p></div></article>
+      <article class="gallery-item hidden" data-category="eskuvo"><div class="gallery-photo gallery-photo-8"></div></article>
+      <article class="gallery-item hidden" data-category="portre"><div class="gallery-photo gallery-photo-9"></div></article>
+      <article class="gallery-item hidden" data-category="rendezveny"><div class="gallery-photo gallery-photo-10"></div></article>
+      <article class="gallery-item hidden" data-category="video"><div class="gallery-photo gallery-photo-11"></div></article>
+      <article class="gallery-item hidden" data-category="video"><div class="gallery-photo gallery-photo-12"></div></article>
+    </div>
+
+    <div class="gallery-more-wrapper">
+      <button class="gallery-more-btn">További képek</button>
+    </div>
+  </div>
+</section>
+
+<!-- Videók -->
+<section class="section videos" id="videok">
+  <div class="container">
+    <div class="section-header">
+      <p class="eyebrow">Videók</p>
+      <h2>Kedvenc filmes pillanataim</h2>
+    </div>
+    <div class="video-grid">
+      <div class="video-item"><video controls src="video1.mp4"></video></div>
+      <div class="video-item"><video controls src="video2.mp4"></video></div>
+      <div class="video-item"><video controls src="video3.mp4"></video></div>
+    </div>
+  </div>
+</section>
+
+<!-- Elérhetőség / Form -->
+<section class="section contact" id="elerhetoseg">
+  <div class="container">
+    <div class="section-header">
+      <p class="eyebrow">Elérhetőségek</p>
+      <h2>Írj nekem üzenetet</h2>
+    </div>
+    <form class="contact-form">
+      <label>Név<input type="text" name="name" required></label>
+      <label>Email<input type="email" name="email" required></label>
+      <label>Üzenet<textarea name="message" required></textarea></label>
+      <button type="submit" class="btn btn-primary">Küldés</button>
+    </form>
+  </div>
+</section>
+
+<!-- GYIK -->
+<section class="section faq" id="gyik">
+  <div class="container">
+    <div class="section-header">
+      <p class="eyebrow">GYIK</p>
+      <h2>Gyakran ismételt kérdések</h2>
+    </div>
+    <div class="faq-item"><h3>Mennyi idő egy esküvői fotózás?</h3><p>Általában 6–10 óra, a helyszíntől és igényektől függően.</p></div>
+    <div class="faq-item"><h3>Mennyi idő alatt kapom meg a képeket?</h3><p>Általában 2–3 hét, a retusálás és válogatás után.</p></div>
+    <div class="faq-item"><h3>Lehet drónos felvétel?</h3><p>Igen, engedélyekkel és biztonságosan készítjük el.</p></div>
+  </div>
+</section>
+
+</main>
+
+<!-- Footer -->
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <span>&copy; 2026 dr-photo. Minden jog fenntartva.</span>
+    <a href="#top" class="back-to-top" data-scroll>Vissza a tetejére</a>
+  </div>
+</footer>
+
+<script>
+const navToggle = document.querySelector(".nav-toggle");
+const mainNav = document.querySelector(".main-nav");
+navToggle.addEventListener("click", () => {
+  navToggle.classList.toggle("is-open");
+  mainNav.classList.toggle("is-open");
+});
+
+// Smooth scroll
+document.querySelectorAll('[data-scroll]').forEach(link => {
+  link.addEventListener("click", e => {
+    e.preventDefault();
+    const target = document.querySelector(link.getAttribute("href"));
+    if(target) target.scrollIntoView({behavior:"smooth"});
+  });
+});
+
+// Galéria – További képek
+const moreBtn = document.querySelector(".gallery-more-btn");
+if(moreBtn){
+  moreBtn.addEventListener("click", () => {
+    document.querySelectorAll(".gallery-item.hidden").forEach(item => {
+      item.classList.remove("hidden");
+    });
+    moreBtn.style.display = "none";
+  });
+}
+</script>
+
+</body>
 </html>
