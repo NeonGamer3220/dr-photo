@@ -23,31 +23,22 @@ function setupSmoothScroll() {
   });
 }
 
-// Show overlay when clicking gallery photos
+const overlay = document.getElementById('img-overlay');
+const overlayImg = document.getElementById('overlay-img');
+const closeBtn = document.getElementById('close-overlay');
+
 document.querySelectorAll('.gallery-photo').forEach(photo => {
   photo.addEventListener('click', () => {
-    const overlay = document.getElementById('img-overlay');
-    const overlayImg = document.getElementById('overlay-img');
-
-    // Get background-image URL
     const bg = window.getComputedStyle(photo).backgroundImage;
-    const url = bg.slice(5, -2); // remove url("...")
+    const url = bg.slice(5, -2);
     overlayImg.src = url;
-
     overlay.style.display = 'flex';
   });
 });
 
-// Close overlay on click anywhere
-document.getElementById('img-overlay').addEventListener('click', () => {
-  document.getElementById('img-overlay').style.display = 'none';
-});
-
-// Close overlay with ESC key
-document.addEventListener('keydown', (e) => {
-  if (e.key === "Escape") {
-    document.getElementById('img-overlay').style.display = 'none';
-  }
+// Close button
+closeBtn.addEventListener('click', () => {
+  overlay.style.display = 'none';
 });
 
 // Mobile navigation (small screens)
