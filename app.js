@@ -118,6 +118,41 @@ function setupShowMoreButton() {
   });
 }
 
+function setupContactForm() {
+  const form = document.querySelector(".contact-form");
+  if (!form) return;
+
+  form.addEventListener("submit", (event) => {
+    event.preventDefault();
+
+    const name = form.querySelector("#name")?.value.trim() || "";
+    const email = form.querySelector("#email")?.value.trim() || "";
+    const date = form.querySelector("#date")?.value.trim() || "";
+    const type = form.querySelector("#type")?.value.trim() || "";
+    const message = form.querySelector("#message")?.value.trim() || "";
+
+    if (!name || !email) {
+      form.reportValidity();
+      return;
+    }
+
+    const subject = "Új érdeklődés a dr-photo weboldalról";
+    const bodyLines = [
+      `Név: ${name}`,
+      `Email: ${email}`,
+      `Dátum: ${date || "nincs megadva"}`,
+      `Típus: ${type || "nincs megadva"}`,
+      "",
+      "Üzenet:",
+      message || "nincs megadva",
+    ];
+
+    const mailto = `mailto:doczi.robert@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(bodyLines.join("\n"))}`;
+
+    window.location.href = mailto;
+  });
+}
+
 // Footer year
 function setYear() {
   const yearEl = document.querySelector("#year");
@@ -131,6 +166,7 @@ function init() {
   setupMobileNav();
   setupGalleryFilters();
   setupShowMoreButton();
+  setupContactForm();
   setYear();
 }
 
