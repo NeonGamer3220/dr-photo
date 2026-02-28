@@ -410,7 +410,7 @@ a {
       rgba(15, 23, 42, 0.2),
       transparent 40%
     ),
-    url("https://images.pexels.com/photos/167832/pexels-photo-167832.jpeg?auto=compress&cs=tinysrgb&w=1200");
+    url("images/közös-42.jpg");
 }
 
 .hero-photo-secondary {
@@ -424,7 +424,7 @@ a {
       rgba(15, 23, 42, 0.3),
       transparent 40%
     ),
-    url("https://images.pexels.com/photos/1678329/pexels-photo-1678329.jpeg?auto=compress&cs=tinysrgb&w=1200");
+    url("images/buli-31.jpg");
   box-shadow: var(--shadow-subtle);
 }
 
