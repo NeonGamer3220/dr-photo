@@ -519,14 +519,6 @@
     <script src="app.js"></script>
   </body>
 </html>
-    max-height: 90%;
-    border-radius: 12px;
-    box-shadow: 0 0 30px black;
-    cursor: default;
-  }
-
-  #close-overlay {
-    position: absolute;
     top: 20px;
     right: 30px;
     font-size: 3rem;
@@ -551,11 +543,8 @@
   document.querySelectorAll('.gallery-photo').forEach(photo => {
     photo.addEventListener('click', (e) => {
       e.stopPropagation();
-      // Extract the number from class "gallery-photo-N"
-      const match = [...photo.classList].find(c => c.startsWith('gallery-photo-'));
-      if (!match) return;
-      const num = match.split('-')[2];
-      const url = `images/Alexandra és Tomi-${num}.jpg`; // adjust folder & naming if different
+      const bg = window.getComputedStyle(photo).backgroundImage;
+      const url = bg.slice(5, -2);
       overlayImg.src = url;
       overlay.style.display = 'flex';
     });
