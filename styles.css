@@ -181,10 +181,11 @@ a {
 .brand-mark {
   width: 40px;
   height: 40px;
-  border-radius: 14px;
+  border-radius: 0;
   object-fit: cover;
   display: block;
-  box-shadow: 0 10px 26px rgba(14, 165, 233, 0.35);
+  background: transparent !important;
+  box-shadow: none;
 }
 
 .brand-title {
