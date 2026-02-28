@@ -61,28 +61,7 @@ a {
   padding: 4.5rem 0;
 }
 
-#close-overlay {
-  position: absolute;
-  top: 20px;
-  right: 20px;
-  font-size: 2rem;
-  color: #fff;
-  background: rgba(0,0,0,0.5);
-  border: none;
-  border-radius: 50%;
-  width: 50px;
-  height: 50px;
-  cursor: pointer;
-  z-index: 10000;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: background 0.2s;
-}
 
-#close-overlay:hover {
-  background: rgba(255,255,255,0.2);
-}
 
 .section:first-of-type {
   padding-top: 5.5rem;
@@ -146,21 +125,42 @@ a {
 
 #img-overlay {
   position: fixed;
-  inset: 0; /* top:0; right:0; bottom:0; left:0 */
+  inset: 0; /* top:0; bottom:0; left:0; right:0; */
   background: rgba(0,0,0,0.95);
-  display: none;  /* hidden by default */
-  align-items: center;
+  display: none; /* hidden by default */
   justify-content: center;
+  align-items: center;
   z-index: 9999;
-  cursor: pointer; /* click anywhere to close */
 }
 
-#img-overlay img {
+#overlay-img {
   max-width: 95%;
   max-height: 95%;
-  border-radius: 12px;
-  box-shadow: 0 8px 40px rgba(0,0,0,0.8);
-  pointer-events: none; /* ensures clicks go through image to overlay */
+  border-radius: 8px;
+  box-shadow: 0 0 40px rgba(0,0,0,0.8);
+}
+
+#close-overlay {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 2.5rem;
+  color: #fff;
+  background: rgba(0,0,0,0.5);
+  border: none;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  cursor: pointer;
+  z-index: 10000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s;
+}
+
+#close-overlay:hover {
+  background: rgba(255,255,255,0.2);
 }
 
 .header-inner {
