@@ -23,22 +23,22 @@ function setupSmoothScroll() {
   });
 }
 
-// Fullscreen gallery click
+// Show overlay when clicking gallery photos
 document.querySelectorAll('.gallery-photo').forEach(photo => {
   photo.addEventListener('click', () => {
     const overlay = document.getElementById('img-overlay');
     const overlayImg = document.getElementById('overlay-img');
 
-    // get computed background image URL
+    // Get background-image URL
     const bg = window.getComputedStyle(photo).backgroundImage;
-    const url = bg.slice(5, -2); // remove url("...") wrapper
+    const url = bg.slice(5, -2); // remove url("...")
     overlayImg.src = url;
 
     overlay.style.display = 'flex';
   });
 });
 
-// Close overlay when clicking anywhere on overlay
+// Close overlay on click anywhere
 document.getElementById('img-overlay').addEventListener('click', () => {
   document.getElementById('img-overlay').style.display = 'none';
 });
