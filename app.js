@@ -23,23 +23,45 @@ function setupSmoothScroll() {
   });
 }
 
-const overlay = document.getElementById('img-overlay');
-const overlayImg = document.getElementById('overlay-img');
-const closeBtn = document.getElementById('close-overlay');
+function setupLightbox() {
+  const overlay = document.getElementById("img-overlay");
+  const overlayImg = document.getElementById("overlay-img");
+  const closeBtn = document.getElementById("close-overlay");
+  const photos = document.querySelectorAll(".gallery-photo");
 
-document.querySelectorAll('.gallery-photo').forEach(photo => {
-  photo.addEventListener('click', () => {
-    const bg = window.getComputedStyle(photo).backgroundImage; // url("...")
-    const url = bg.slice(5, -2); // remove url("") wrapper
-    overlayImg.src = url; 
-    overlay.style.display = 'flex'; // show overlay
+  if (!overlay || !overlayImg || !closeBtn || !photos.length) return;
+
+  const closeOverlay = () => {
+    overlay.style.display = "none";
+    overlayImg.src = "";
+  };
+
+  photos.forEach((photo) => {
+    photo.addEventListener("click", () => {
+      const bg = window.getComputedStyle(photo).backgroundImage;
+      const match = bg.match(/url\(["']?(.+?)["']?\)/);
+      const url = match?.[1];
+      if (!url) return;
+
+      overlayImg.src = url;
+      overlay.style.display = "flex";
+    });
   });
-});
 
-// Close button
-closeBtn.addEventListener('click', () => {
-  overlay.style.display = 'none';
-});
+  closeBtn.addEventListener("click", closeOverlay);
+
+  overlay.addEventListener("click", (e) => {
+    if (e.target === overlay) {
+      closeOverlay();
+    }
+  });
+
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape" && overlay.style.display === "flex") {
+      closeOverlay();
+    }
+  });
+}
 
 // Mobile navigation (small screens)
 function setupMobileNav() {
@@ -83,15 +105,18 @@ function setupGalleryFilters() {
     });
   });
 }
-const showMoreBtn = document.getElementById("showMoreBtn");
+function setupShowMoreButton() {
+  const showMoreBtn = document.getElementById("showMoreBtn");
+  if (!showMoreBtn) return;
 
-showMoreBtn.addEventListener("click", () => {
-  document.querySelectorAll(".gallery-item.hidden").forEach(item => {
-    item.classList.remove("hidden");
+  showMoreBtn.addEventListener("click", () => {
+    document.querySelectorAll(".gallery-item.hidden").forEach((item) => {
+      item.classList.remove("hidden");
+    });
+
+    showMoreBtn.style.display = "none";
   });
-
-  showMoreBtn.style.display = "none";
-});
+}
 
 // Footer year
 function setYear() {
@@ -102,21 +127,12 @@ function setYear() {
 
 function init() {
   setupSmoothScroll();
+  setupLightbox();
   setupMobileNav();
   setupGalleryFilters();
+  setupShowMoreButton();
   setYear();
 }
-document.addEventListener("DOMContentLoaded", () => {
-  const showMoreBtn = document.getElementById("showMoreBtn");
-
-  showMoreBtn.addEventListener("click", () => {
-    document.querySelectorAll(".gallery-item.hidden").forEach(item => {
-      item.classList.remove("hidden");
-    });
-
-    showMoreBtn.style.display = "none";
-  });
-});
 
 if (document.readyState === "loading") {
   document.addEventListener("DOMContentLoaded", init);
