@@ -61,6 +61,29 @@ a {
   padding: 4.5rem 0;
 }
 
+#close-overlay {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 2rem;
+  color: #fff;
+  background: rgba(0,0,0,0.5);
+  border: none;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+  z-index: 10000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s;
+}
+
+#close-overlay:hover {
+  background: rgba(255,255,255,0.2);
+}
+
 .section:first-of-type {
   padding-top: 5.5rem;
 }
