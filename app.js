@@ -29,7 +29,7 @@ document.querySelectorAll('.gallery-photo').forEach(photo => {
     const overlay = document.getElementById('img-overlay');
     const overlayImg = document.getElementById('overlay-img');
 
-    // Get computed background image URL
+    // get computed background image URL
     const bg = window.getComputedStyle(photo).backgroundImage;
     const url = bg.slice(5, -2); // remove url("...") wrapper
     overlayImg.src = url;
@@ -38,14 +38,16 @@ document.querySelectorAll('.gallery-photo').forEach(photo => {
   });
 });
 
-// Close overlay on click
+// Close overlay when clicking anywhere on overlay
 document.getElementById('img-overlay').addEventListener('click', () => {
   document.getElementById('img-overlay').style.display = 'none';
 });
 
-// Close overlay on click
-document.getElementById('img-overlay').addEventListener('click', () => {
-  document.getElementById('img-overlay').style.display = 'none';
+// Close overlay with ESC key
+document.addEventListener('keydown', (e) => {
+  if (e.key === "Escape") {
+    document.getElementById('img-overlay').style.display = 'none';
+  }
 });
 
 // Mobile navigation (small screens)
