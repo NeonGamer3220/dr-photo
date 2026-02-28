@@ -20,7 +20,11 @@
     <header class="site-header" id="top">
       <div class="container header-inner">
         <a href="#kezdolap" class="brand" data-scroll>
-          <span class="brand-mark">dr</span>
+          <img
+            class="brand-mark"
+            src="images/dr photo logo.png"
+            alt="DR Photo logo"
+          />
           <div>
             <h1 class="brand-title">dr-photo</h1>
             <p class="brand-tagline">Cinematic fotó & videó</p>
@@ -516,52 +520,12 @@
       </div>
     </footer>
 
+    <!-- Lightbox Overlay -->
+    <div id="img-overlay">
+      <button id="close-overlay" aria-label="Bezárás">&times;</button>
+      <img id="overlay-img" src="" alt="Teljes képernyős kép">
+    </div>
+
     <script src="app.js"></script>
-  </body>
-</html>
-    top: 20px;
-    right: 30px;
-    font-size: 3rem;
-    color: white;
-    background: none;
-    border: none;
-    cursor: pointer;
-    z-index: 10000;
-  }
-</style>
-
-<div id="img-overlay">
-  <button id="close-overlay">&times;</button>
-  <img id="overlay-img" src="" alt="Fullscreen">
-</div>
-
-<script>
-  const overlay = document.getElementById('img-overlay');
-  const overlayImg = document.getElementById('overlay-img');
-  const closeBtn = document.getElementById('close-overlay');
-
-  document.querySelectorAll('.gallery-photo').forEach(photo => {
-    photo.addEventListener('click', (e) => {
-      e.stopPropagation();
-      const bg = window.getComputedStyle(photo).backgroundImage;
-      const url = bg.slice(5, -2);
-      overlayImg.src = url;
-      overlay.style.display = 'flex';
-    });
-  });
-
-  closeBtn.addEventListener('click', () => overlay.style.display = 'none');
-  overlay.addEventListener('click', (e) => {
-    if (e.target === overlay) overlay.style.display = 'none';
-  });
-
-  document.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape') overlay.style.display = 'none';
-  });
-</script>
-    
-<div id="img-overlay" style="display:none;position:fixed;top:0;left:0;width:100vw;height:100vh;background:rgba(0,0,0,0.95);justify-content:center;align-items:center;z-index:9999;cursor:pointer;">
-  <img id="overlay-img" src="" style="max-width:90%;max-height:90%;border-radius:12px;box-shadow:0 0 30px black;">
-</div>
   </body>
 </html>
