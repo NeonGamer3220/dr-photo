@@ -29,10 +29,10 @@ const closeBtn = document.getElementById('close-overlay');
 
 document.querySelectorAll('.gallery-photo').forEach(photo => {
   photo.addEventListener('click', () => {
-    const bg = window.getComputedStyle(photo).backgroundImage;
-    const url = bg.slice(5, -2);
-    overlayImg.src = url;
-    overlay.style.display = 'flex';
+    const bg = window.getComputedStyle(photo).backgroundImage; // url("...")
+    const url = bg.slice(5, -2); // remove url("") wrapper
+    overlayImg.src = url; 
+    overlay.style.display = 'flex'; // show overlay
   });
 });
 
