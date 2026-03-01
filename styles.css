@@ -793,6 +793,22 @@ a {
 
 /* Info / Packages */
 
+.news {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+}
+
+.news-card {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.news-card p {
+  margin: 0.3rem 0 0;
+  color: var(--text-soft);
+  font-size: 0.92rem;
+}
+
 .info {
   padding-top: 4.5rem;
 }
