@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+YOH<!DOCTYPE html>
 <html lang="hu">
   <head>
     <meta charset="UTF-8" />
@@ -31,12 +31,17 @@
           </div>
         </a>
 
-        <button class="nav-toggle" aria-label="Menü megnyitása">
+        <button
+          class="nav-toggle"
+          aria-label="Menü megnyitása"
+          aria-expanded="false"
+          aria-controls="site-nav"
+        >
           <span></span>
           <span></span>
         </button>
 
-        <nav class="main-nav">
+        <nav class="main-nav" id="site-nav">
           <a href="#kezdolap" data-scroll>Kezdőlap</a>
           <a href="#magamrol" data-scroll>Magamról</a>
           <a href="#munkak" data-scroll>Munkáim</a>
@@ -252,7 +257,7 @@
               <div class="video-frame">
                 <iframe
                   src="https://www.youtube.com/embed/haW9j7EcPAw"
-                  title="2024-es képek"
+                  title="Esküvői highlight videó"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                   allowfullscreen
                 ></iframe>
@@ -265,24 +270,24 @@
               </div>
             </article>
 
-          <div class="video-grid">
             <article class="video-card">
               <div class="video-frame">
                 <iframe
-                  src="https://youtu.be/VzVQNVOaC64?si=7TY1Vu-m914S-HID"
-                  title="Pablo Escobar"
+                  src="https://www.youtube.com/embed/diFmJGZe_ol"
+                  title="Rendezvény / referencia videó"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                   allowfullscreen
                 ></iframe>
               </div>
               <div class="video-meta">
-                <h3>Pablo Escobar</h3>
-                <p>
-                  Videó a Viktória Fógadóban készült.
-                </p>
+                <h3>2025 Képek</h3>
+                <p>Képek a Viktória Fogadóban készültek.</p>
               </div>
             </article>
-            
+          </div>
+        </div>
+      </section>
+
       <!-- Hírek, események -->
       <section class="section news" id="hirek-esemenyek">
         <div class="container">
