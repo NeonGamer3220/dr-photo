@@ -388,42 +388,22 @@ a {
   padding: 1rem 2rem;
   font-size: 1rem;
   font-weight: 600;
-  color: #fff;
-  background: linear-gradient(
-    90deg,
-    #ff0000,
-    #ff7f00,
-    #ffff00,
-    #00ff00,
-    #0000ff,
-    #4b0082,
-    #9400d3
-  );
-  background-size: 300% 100%;
+  color: #020617;
+  background: linear-gradient(130deg, #f97316, #ec4899, #6366f1);
   border: none;
   border-radius: 999px;
   cursor: pointer;
-  transition: background-position 0.5s ease, transform 0.2s ease, box-shadow 0.2s ease;
-  box-shadow: 0 4px 20px rgba(255, 0, 0, 0.3);
-  animation: rainbow-move 3s linear infinite;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  box-shadow: 0 20px 45px rgba(236, 72, 153, 0.7);
 }
 
 .btn-rainbow:hover {
   transform: translateY(-2px);
-  box-shadow: 0 6px 30px rgba(255, 0, 0, 0.5);
+  box-shadow: 0 26px 60px rgba(236, 72, 153, 0.85);
 }
 
 .btn-rainbow:active {
   transform: translateY(0);
-}
-
-@keyframes rainbow-move {
-  0% {
-    background-position: 0% 50%;
-  }
-  100% {
-    background-position: 300% 50%;
-  }
 }
 
 .hero-stats {
